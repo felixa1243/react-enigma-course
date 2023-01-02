@@ -1,17 +1,15 @@
-import Navbar from "./components/Navbar.jsx";
-import {Route, Routes, Outlet, Navigate, useNavigate} from 'react-router-dom';
+import {Outlet, Route, Routes} from 'react-router-dom';
 import CourseList from "./page/CourseList.jsx";
 import AddCourse from "./page/AddCourse.jsx";
 import EditCourse from "./page/EditCourse.jsx";
 import {ROUTES} from "./constant/index.js";
 import TypeList from "./page/TypeList.jsx";
 import AddType from "./page/AddType.jsx";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Home from "./page/Home.jsx";
 import ProtectedRoute from "./components/ProtectedRoutes.jsx";
 
 function App() {
-    const navigate = useNavigate()
     const Wrapper = (props) => {
         return (
             <div>
@@ -21,7 +19,6 @@ function App() {
         )
     }
     const [isLoggedIn, setLoggedIn] = useState(false)
-    useEffect(() => console.log(isLoggedIn), [isLoggedIn])
     return (
         <div className="App">
             <Routes>
