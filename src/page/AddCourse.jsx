@@ -8,11 +8,7 @@ const AddCourse = () => {
         <div>
             <h3>Add course</h3>
             <p>Params :{location?.state?.title}</p>
-            <button onClick={() => navigate(ROUTES.COURSE_LIST,{
-                state:{
-                    title:'from add course'
-                }
-            })}>Go to course list</button>
+            <button onClick={() => navigate(ROUTES.COURSE_LIST+'?title=from add course')}>Go to course list</button>
         </div>
     )
 }

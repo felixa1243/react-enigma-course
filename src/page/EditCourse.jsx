@@ -11,11 +11,7 @@ const EditCourse = ()=>{
             <h3>Edit course</h3>
             <p>Params:{location?.state?.title}</p>
             <p>path variable: {params.id}</p>
-            <button onClick={()=>navigate(ROUTES.COURSE_LIST,{
-                state:{
-                    title:`From edit course with id ${params.id}`
-                }
-            })}>Go to course List</button>
+            <button onClick={()=>navigate(ROUTES.COURSE_LIST+'?anjay')}>Go to course List</button>
         </div>
     )
 }

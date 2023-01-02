@@ -12,9 +12,9 @@ const Navbar = () => {
         <nav>
             {
                 menu.map((item, index) => (
-                    <Link to={item.path}
-                       style={{marginLeft: 10, textDecoration: "none", color: "black"}}
-                       key={index}
+                    <Link to={item.path === ROUTES.COURSE_LIST ? item.path + '?title=from nav' : item.path}
+                          style={{marginLeft: 10, textDecoration: "none", color: "black"}}
+                          key={index}
                     >{item.text}</Link>
                 ))
             }
