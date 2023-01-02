@@ -1,19 +1,27 @@
-import {Routes} from "../constant/index.js";
+import {ROUTES} from "../constant/index.js";
+import {useLocation, useNavigate} from "react-router-dom";
 
-const TypeList = ({onNavigate}) => {
+const TypeList = () => {
+    const navigate = useNavigate()
+    const location = useLocation()
+    const params = {
+        state:{
+            title:'from type list'
+        }
+    }
     return (
         <div>
             <h3>Course Type Page</h3>
-            <p>Params : params</p>
+            <p>Params : {location?.state?.title}</p>
             <button
-                onClick={() => onNavigate(Routes.ADD_COURSE)}>Go to add course
+                onClick={() => navigate(ROUTES.ADD_COURSE,params)}>Go to add course
             </button>
             <button
-                onClick={() => onNavigate(Routes.ADD_TYPE)}
+                onClick={() => navigate(ROUTES.ADD_TYPE,params)}
             >Go to add type
             </button>
             <button
-                onClick={() => onNavigate(Routes.COURSE_LIST)}
+                onClick={() => navigate(ROUTES.COURSE_LIST,params)}
             >Go to course list
             </button>
         </div>
