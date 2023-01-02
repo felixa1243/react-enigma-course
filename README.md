@@ -1,1 +1,1 @@
-A simple unstyled react router with protected routing
+Course management implementation from course management api
