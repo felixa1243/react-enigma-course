@@ -1,4 +1,4 @@
-import {ROUTES} from "../constant/index.js";
+import {ROUTES} from "../constant/Routes.js";
 import {useLocation, useNavigate} from "react-router-dom";
 
 const AddType = () => {

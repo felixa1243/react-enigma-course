@@ -1,5 +1,5 @@
 import {Navigate, Outlet} from "react-router-dom";
-import {ROUTES} from "../constant/index.js";
+import {ROUTES} from "../constant/Routes.js";
 import Navbar from "./Navbar.jsx";
 
 const ProtectedRoute = ({isLoggedIn, onClick}) => {
@@ -7,14 +7,8 @@ const ProtectedRoute = ({isLoggedIn, onClick}) => {
         return <Navigate to={ROUTES.HOME}/>
     }
     return (
-        <div>
-            <div style={{
-                display: 'flex',
-                gap: '10px'
-            }}>
-                <Navbar/>
-                <button onClick={onClick}>Logout</button>
-            </div>
+        <div className={'flex flex-col w-full'}>
+                <Navbar onClick={onClick}/>
             <hr/>
             <Outlet/>
         </div>

@@ -1,26 +1,26 @@
 import {Outlet, Route, Routes} from 'react-router-dom';
 import CourseList from "./page/CourseList.jsx";
-import AddCourse from "./page/AddCourse.jsx";
+import AddCourse from "./page/AddCourse/AddCourse.jsx";
 import EditCourse from "./page/EditCourse.jsx";
-import {ROUTES} from "./constant/index.js";
+import {ROUTES} from "./constant/Routes.js";
 import TypeList from "./page/TypeList.jsx";
 import AddType from "./page/AddType.jsx";
 import {useState} from "react";
 import Home from "./page/Home.jsx";
 import ProtectedRoute from "./components/ProtectedRoutes.jsx";
+import './assets/style.css'
 
 function App() {
-    const Wrapper = (props) => {
+    const Wrapper = () => {
         return (
             <div>
-                <h3>{props.title}</h3>
                 <Outlet/>
             </div>
         )
     }
     const [isLoggedIn, setLoggedIn] = useState(false)
     return (
-        <div className="App">
+        <div className="max-w-screen h-screen">
             <Routes>
                 <Route element={<Home onClick={() => {
                     setLoggedIn(true)

@@ -1,4 +1,4 @@
-import {ROUTES} from "../constant/index.js";
+import {ROUTES} from "../constant/Routes.js";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 

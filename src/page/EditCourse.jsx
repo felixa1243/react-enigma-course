@@ -1,5 +1,5 @@
 import {useLocation, useNavigate, useParams} from "react-router-dom";
-import {ROUTES} from "../constant/index.js";
+import {ROUTES} from "../constant/Routes.js";
 
 const EditCourse = ()=>{
     const navigate = useNavigate()
